@@ -1,0 +1,33 @@
+.checkbox-name[type=checkbox]{
+    appearance: none;
+    background-color: gray;
+    height: 25px;
+    width: 25px;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.checkbox-name[type=checkbox]::before{
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    content: '\2713';
+    font-size: 15px;
+    line-height: 15px;
+    color:white;
+    transform: scale(0);
+    transition: 0.3 all ease-in-out;
+}
+
+.checkbox-name[type=checkbox]:checked::before{
+    transform: scale(1);
+}
+section{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
